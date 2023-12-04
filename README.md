@@ -2,29 +2,24 @@
 
 How to build reliable, robust projects, and how to debug and document them
 
-1. Documenting projects
-
-1.1. The difference between a schematic and an assembly drawing: This is a
+### Documenting projects
+1. The difference between a schematic and an assembly drawing: This is a
 schematic, while this is an assembly drawing
 
-1. Programs
+### Programs
 
-1.1. Don't use "magic numbers". Use "const int" 
+1. Don't use "magic numbers". Use "const int" 
 and a good variable name. Good variable names almost make comments 
 unnecessary.
-
-1.1. Proper indentation make it easier to spot mistakes in logic or
+1. Proper indentation make it easier to spot mistakes in logic or
 incorrect curly braces, and easier for someone else to read
-
-1.1. Comments
-
-1.1.1. Use empty lines to separate groups of related things, and explain
+1. Comments
+1.1. Use empty lines to separate groups of related things, and explain
 in a comment what each group does
-
-1.1.1. Especially for conditionals and for() loops, 
+1.1. Especially for conditionals and for() loops, 
 describe how the code is doing what you want, e.g.
 
-````if (sensorReading > 100 && inMotion == false)````
+```if (sensorReading > 100 && inMotion == false)```
 
 What condition are you detecting, and what are you going to do as a result of that?
 
@@ -39,7 +34,7 @@ or the analog input pin was closer to where you needed to go.)
 1.1.1. Remove any irrelevant comments
 
 
-1. Schematics
+### Schematics
 
 1.1. Inputs (sensors) on the left, outputs (actuators) on the right
 
@@ -49,7 +44,7 @@ inputs and outputs
 1.1. Use a single line for 5V and GND (or use labels)
 
 
-1. Breadboards
+### Breadboards
 
 1.1. Always use red for 5V, and never use red for anything else
 
@@ -65,7 +60,7 @@ bus.
 1.1. Use a bigger breadboard if your breadboard is getting too crowded
 
 
-1. Moving off the breadboard
+### Moving off the breadboard
 
 1.1. Always use red for 5V, and never use red for anything else
 
@@ -76,7 +71,7 @@ installed on a breadboard.  There are special potentiometers and switches that
 are designed to be connected to wire. These are usually called "panel-mount"
 switches or potentiometers.
 
-1. Circuit Design
+### Circuit Design
 
 1.1. Pin choices
 
