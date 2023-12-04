@@ -18,7 +18,7 @@ things you had difficulty with
     1. Learn the difference between a schematic and assembly instructions: 
 This is a
 schematic:
-![](media/arduinoSparkFunMotorDriver_schem.jpg)
+![](https://github.com/michaelshiloh/IntroductionToInteractiveMedia/blob/master/media/arduinoSparkFunMotorDriver_schem.jpg)
 while these are assembly instructions:
 ![](https://cdn.sparkfun.com/assets/learn_tutorials/8/9/1/SIK_Circuit_5A_SIK_Circuit_5A_Motor__Basics_bb_Fritzing.jpg)
     1. Your schematics should be well organized for clarity. 
