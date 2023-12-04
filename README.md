@@ -9,8 +9,8 @@ How to build reliable, robust projects, and how to debug and document them
 1. Components with long leads (e.g. LEDs and resistors) that are connected
 to GND or 5V can go directly to those buses. There is no reason to have the
 LED in the middle of the breadboard and then have a wire from there to the
-bus.
-1. Use a bigger breadboard if your breadboard is getting too crowded
+bus. (Add pictures to illustrate)
+1. Use a bigger breadboard, or even multiple breadboards, if your breadboard is getting too crowded
 
 ### Human interface for your project
 
@@ -18,7 +18,7 @@ Arduino projects usually involve some kind of controls such as switches,
 potentiometers, or other sensors and output devices like LEDs. 
 Your project will be easier to use, and less
 likely to be damaged, if you mount these human interface devices
-on a panel of some kind rather than the solderless breadboard. 
+on a panel of some kind rather than on the solderless breadboard. 
 A commercial product is expected to be in some kind of enclosure, 
 but as you are still learning I encourage you not to spend too much time
 making a full enclosure. Consider a box open on at least one size for
@@ -40,15 +40,18 @@ dimensions.
 1. Cardboard:
 A perfectly acceptable enclosure can be made of cardboard and assembled using
 hot glue. This has the advantage that you are not dependent on 
-anyone or access to specialized tools or equipment.
+anyone or access to specialized tools or equipment. It is also better for the
+environment.
 
 #### Components
 
 When working on the solderless breadboard, we use components that are designed
 to fit into the holes on the breadboard. These components are also designed to
-fit a Printed Circuit Board (PCB) and therefore are called *PCB mount*
+fit a *Printed Circuit Board* (PCB) and therefore are called *PCB mount*
 components. When you move to an enclosure or panel, these are **not** the
-right type of component to use. Fortunately, there exist components that are
+right type of component to use. 
+
+Fortunately, there exist components that are
 designed to be mounted in a panel which are called *panel mount* components.
 In the IM lab we have panel mount switches and potentiometers which work
 exactly like the switches and potentiometers that you are familiar with. They
@@ -64,13 +67,21 @@ without wires attached)
 Whatever method you use, consider the following:
 1. Make sure that your Arduino and breadboard are somehow attached to the 
 enclosure so that if someone moves the enclosure 
+it won't pull the wires out of your breadboard. 
+A little bit of hot glue works well and can easily be removed
+    1. Your solderless breadboard has
+double sided tape on the back but beware that once you stick it on something
+you should never remove it, as this tape is what's holding the breadboard
+together.
 1. Anchor the USB cable in some way so that if someone pulls it by accident 
 it won't pull the wires out of your breadboard. Zip ties work well for this.
 1. You will almost certainly need to repair and modify your project. Make sure
    that it is easy to access the electronics. For this reason I prefer a
-   simple flat panel with feet
+   simple flat panel with feet. If you insist on an enclosure I encourage
+   leaving one or more sides open.
 1. Think about a logical, intuitive placement of controls and output devices.
    Think about the articles we read about design.
+1. Label your control panel. You might also put instructions here.
 
 
 
@@ -78,15 +89,19 @@ it won't pull the wires out of your breadboard. Zip ties work well for this.
 
 The solderless breadboard is a wonderful invention for
    quickly prototyping and testing ideas, but the connections are not reliable
-   and it's too easy for wires or components to become detached. You can
-   solder your circuit
+   and it's too easy for wires or components to become detached. 
+   For a more reliable project you can solder your circuit
+   on a piece of perforated breadboard. I won't cover this in class
+   but you can learn more  by watching the video that accompanies
+   [this](https://www.adafruit.com/product/571) product.
+
+   If you do use this method, follow these guidelines:
 
 1. Always use red for 5V, and never use red for anything else
 1. Always use black for GND, and never use black for anything else
-1. Do not solder wires to potentiometer or switches that are designed to be
-installed on a breadboard.  There are special potentiometers and switches that
-are designed to be connected to wire. These are usually called "panel-mount"
-switches or potentiometers.
+1. Do not solder wires to PCB mount potentiometer or switches that are
+   designed to be mounted on a breadboard.  Instead, use panel mount
+   components.
 
 
 ### Soldering
@@ -149,19 +164,29 @@ or the analog input pin was closer to where you needed to go.)
 
 1. Pin choices
 
-1.1. Avoid using Pins 0 and 1, as these are used for uploading your program
-and for serial communication
+    1. Avoid using Pins 0 and 1, as these are used for uploading your program
+and for serial communication. Attaching any components here may interfere with
+this communication.
 
-1.1. Remember that all 20 Arduino pins can be used for digital input and
-digital output. Of these 20 pins, six can do analog iput (the so-called analog
+    1. Remember that all 20 Arduino pins can be used for digital input and
+digital output. Of these 20 pins, six can do analog input (the so-called analog
 input pins) and six can do "analog" output (PWM). Since these 12 pins are
-special, we want to avoid using them for digital input and output, unless we
+special, we usually avoid using them for digital input and output, until we
 have used up all the simple digital pins
 
-1.1. Be aware that pin 13 blinks three times when Arduino resets. If you
+    1. Be aware that pin 13 blinks three times when Arduino resets. If you
 have this controlling something like a motor, it means that your motor might
 move before your program starts.
 
-1.1. If you use the Wire library 
+    1. If you use the Wire library 
 (e.g. with some sensors and the Adafruit Motor Shield V2) 
 this uses pins A4 and A5, so you can not use these pins for anything else.
+
+### Gotchas
+
+Things that we often forget. Maybe this will save you time:
+
+1. Any pins that are being used as a digital output must be configured as such
+   with the `pinMode()` function
+1. Use of the servo library disables `analogWrite()` (PWM) on pins 9 and 10
+1. Use of the `tone()` function disables `analogWrite()` (PWM) on pins 3 and 11 
