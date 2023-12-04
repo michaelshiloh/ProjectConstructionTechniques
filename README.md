@@ -180,7 +180,8 @@ move before your program starts.
 
     1. If you use the Wire library 
 (e.g. with some sensors and the Adafruit Motor Shield V2) 
-this uses pins A4 and A5, so you can not use these pins for anything else.
+this uses pins A4 and A5 on your Arduino Uno, so you can not use these pins
+for anything else.
 
 ### Gotchas
 
