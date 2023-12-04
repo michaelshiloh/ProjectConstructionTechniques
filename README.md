@@ -15,24 +15,25 @@ How to build reliable, robust projects, and how to debug and document them
     1. Any challenges such as things that didn't work as expected or other
 things you had difficulty with
 1. Schematics
-1.1. Learn the difference between a schematic and assembly instructions: This is a
+    1. Learn the difference between a schematic and assembly instructions: 
+This is a
 schematic:
 ![](media/arduinoSparkFunMotorDriver_schem.jpg)
 while these are assembly instructions:
 ![](https://cdn.sparkfun.com/assets/learn_tutorials/8/9/1/SIK_Circuit_5A_SIK_Circuit_5A_Motor__Basics_bb_Fritzing.jpg)
-1.1. Your schematics should be well organized for clarity. 
+    1. Your schematics should be well organized for clarity. 
 Sometimes this takes
 a couple of drafts before you figure out the optimal
 placement. Don't be afraid to make some rough sketches first.
-1.1. Information should flow on your schematic from left to right. 
+    1. Information should flow on your schematic from left to right. 
 Generally, 
 inputs and sensors should be on the left; outputs and actuators should be on
 the right. (I say generally because sometimes things are both inputs and
 outputs.)
-1.1. Place your components so the connections are as direct as possible.
-1.1.  Make Arduino as tall as you need so there is room for all 
+    1. Place your components so the connections are as direct as possible.
+    1.  Make Arduino as tall as you need so there is room for all 
 inputs and outputs
-1. Use a single line for 5V and GND, or use labels
+    1. Use a single line for 5V and GND, or use labels
 
 ### Programs
 
