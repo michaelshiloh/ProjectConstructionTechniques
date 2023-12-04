@@ -8,11 +8,11 @@ How to build reliable, robust projects, and how to debug and document them
 
 ### Documenting projects
 1. Documentation includes:
-1.1. A clear and well labeled schematic 
-1.1. The code or a link to the code
-1.1. A good description of what the project does and how it does it. 
-1.1. Links to all the resources you used
-1.1. Any challenges such as things that didn't work as expected or other
+    1. A clear and well labeled schematic 
+    1. The code or a link to the code
+    1. A good description of what the project does and how it does it. 
+    1. Links to all the resources you used
+    1. Any challenges such as things that didn't work as expected or other
 things you had difficulty with
 1. Schematics
 1.1. Learn the difference between a schematic and assembly instructions: This is a
