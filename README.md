@@ -43,6 +43,10 @@ hot glue. This has the advantage that you are not dependent on
 anyone or access to specialized tools or equipment. It is also better for the
 environment.
 
+A great resource for working with cardboard is this
+[guide](https://714b93b6-8f08-4438-a192-33c8b6312170.filesusr.com/ugd/534455_ad6ffb237afc468da86e74f6bdc07fbf.pdf)
+by the Adaptive Design Association
+
 #### Components
 
 When working on the solderless breadboard, we use components that are designed
@@ -107,6 +111,24 @@ The solderless breadboard is a wonderful invention for
 ### Soldering
 1. [Learn how to solder](https://github.com/michaelshiloh/resourcesForClasses/tree/master#soldering)
 
+### Working with modules
+Many Arduino projects use modules which are provided 
+with header pins for connections. When used with a solderless breadboard,
+you can plug these pins directly into the solderless breadboard. However
+if the module won't fit in the breadboard, or needs to be located away from
+the breadboard, how will you make the connections?
+1. **The very worst way**: Never never NEVER solder wires directly to the
+   pins! 
+   ![picture to be added]()
+1. If you don't know how to solder, or if you can tolerate connections that
+   can easily become undone, you can use jumper wires with the appropriate
+   ends (socket-to-socket, or socket-to-pins) as needed
+   ![picture to be added]()
+1. The best thing is to make your own custom connector by soldering wires
+to a short length of the appropriate header. This is not easy to do because
+the connections are so close together, but it's worth practicing to develop
+this valuable skill. I will be happy to show you how to do this.
+   ![pictures to be added]()
 
 ### Documenting projects
 1. Documentation includes:
