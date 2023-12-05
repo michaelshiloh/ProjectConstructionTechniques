@@ -130,6 +130,30 @@ the connections are so close together, but it's worth practicing to develop
 this valuable skill. I will be happy to show you how to do this.
    ![pictures to be added]()
 
+Always use stranded wire for this. 
+
+### Working with wire
+
+There is a great temptation to work with solid core wire, because 1) it is
+easier to solder one thick strand and 2) it can plug directly into a
+breadboard or header socket. Avoid this temptation.
+Solid core wire is not as flexible as stranded wire which causes two problems:
+1. It is more likely to break
+1. Any movement will be carried along the stiff wire and will stress the
+       most vulnerable place, for example where it is soldered to a
+       connector
+
+Working with stranded wire requires a bit of practice but the results are much
+more reliable and long lasting.
+
+Always try to minimize the amount of exposed bare metal, as these present 
+opportunities for short circuits
+
+1. Soldering wire to an LED
+1. Heat shrink tubing
+1. Soldering wire to a panel mount potentiometer or switch
+1. Soldering wire to a header socket or header pins
+
 ### Documenting projects
 1. Documentation includes:
     1. A clear and well labeled schematic 
